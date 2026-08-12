@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-glow: rgba(59, 130, 246, 0.5);
+  --color-background: #09090b; /* Very dark zinc */
+  --color-surface: #18181b; /* Dark zinc for cards */
+  --color-surface-hover: #27272a;
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  
+  /* Fraud Colors */
+  --color-fraud-amber: #f59e0b;
+  --color-fraud-amber-bg: rgba(245, 158, 11, 0.1);
+  --color-fraud-red: #ef4444;
+  --color-fraud-red-bg: rgba(239, 68, 68, 0.1);
+  --color-fraud-safe: #10b981;
+  --color-fraud-safe-bg: rgba(16, 185, 129, 0.1);
+
+  --font-sans: 'Outfit', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-panel {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glow-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.glow-safe {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Micro-animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

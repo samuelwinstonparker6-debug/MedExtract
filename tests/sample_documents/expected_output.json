@@ -1,0 +1,33 @@
+{
+    "sample_invoice.jpg": {
+        "source_type": "hospital",
+        "document_type": "invoice",
+        "structured_data": {
+            "amount": "$150.00",
+            "invoice_date": "Oct 15, 2023",
+            "provider_name": "CITY HOSPITAL",
+            "patient_name": "John Doe"
+        }
+    },
+    "sample_prescription.jpg": {
+        "source_type": "doctor",
+        "document_type": "prescription",
+        "structured_data": {
+            "patient_name": "Jane Smith",
+            "doctor_name": "Adams",
+            "dosage": "500mg",
+            "date": "Jan 10, 2024"
+        }
+    },
+    "sample_lab_report.jpg": {
+        "source_type": "lab",
+        "document_type": "lab_report",
+        "structured_data": {
+            "patient_name": "Bob Jones",
+            "test_name": "Metabolic Panel",
+            "result_values": "13.5",
+            "reference_ranges": "13.0 - 17.0",
+            "date": "Feb 20, 2024"
+        }
+    }
+}

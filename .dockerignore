@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+venv/
+venv_*/
+venv_clean_test/
+venv_test/
+*.db
+*.exe
+medextract_source_code.txt
+frontend/node_modules/
+tests/
+tools/
+samples/
+sample_documents/
+test_documents/
+.git/
+*.log

@@ -1,0 +1,31 @@
+{
+    "invoice.pdf": {
+        "source_type": "hospital",
+        "document_type": "invoice",
+        "structured_data": {
+            "patient_name": "John Doe",
+            "provider_name": "City General Hospital",
+            "invoice_date": "2023-10-27",
+            "amount": "$345.00"
+        }
+    },
+    "prescription.pdf": {
+        "source_type": "doctor",
+        "document_type": "prescription",
+        "structured_data": {
+            "patient_name": "John Doe",
+            "doctor_name": "Dr. Sarah Smith",
+            "date": "2023-10-27",
+            "dosage": "500mg"
+        }
+    },
+    "lab_report.pdf": {
+        "source_type": "lab",
+        "document_type": "lab_report",
+        "structured_data": {
+            "patient_name": "John Doe",
+            "date": "2023-10-27",
+            "test_name": "General Lab Test"
+        }
+    }
+}

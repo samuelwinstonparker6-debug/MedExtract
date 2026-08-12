@@ -1,0 +1,202 @@
+{
+  "entries": [
+    {
+      "pair": [
+        "invoices/inv_genuine1_a.png",
+        "invoices/inv_genuine1_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "invoice",
+      "description": "Apollo Hospitals: two patients, same template \u2014 should score NONE",
+      "provider_a": "Apollo Hospitals",
+      "provider_b": "Apollo Hospitals"
+    },
+    {
+      "pair": [
+        "invoices/inv_genuine2_a.png",
+        "invoices/inv_genuine2_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "invoice",
+      "description": "Different providers, different layouts \u2014 no fraud signal expected",
+      "provider_a": "City Medical Centre",
+      "provider_b": "Rainbow Clinic"
+    },
+    {
+      "pair": [
+        "invoices/inv_genuine3_a.png",
+        "invoices/inv_genuine3_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "invoice",
+      "description": "Fortis Healthcare: same provider chain, two patients \u2014 genuine",
+      "provider_a": "Fortis Healthcare",
+      "provider_b": "Fortis Healthcare"
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud1_a.png",
+        "invoices/inv_fraud1_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "invoice",
+      "description": "Near-identical invoice \u2014 only patient name changed \u2014 possible photoshop fraud",
+      "provider_a": "Apollo Hospitals",
+      "provider_b": "Fraudulent Provider"
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud2_a.png",
+        "invoices/inv_fraud2_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "invoice",
+      "description": "Apollo template reused by Fraudulent Clinic \u2014 RED template-reuse forgery",
+      "provider_a": "Apollo Hospitals",
+      "provider_b": "Fraudulent Clinic"
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud3_a.png",
+        "invoices/inv_fraud3_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "invoice",
+      "description": "Apollo Hospitals template cloned by Fake Medcare \u2014 RED forgery",
+      "provider_a": "Apollo Hospitals",
+      "provider_b": "Fake Medcare"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine1_a.png",
+        "prescriptions/presc_genuine1_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "prescription",
+      "description": "Dr. Suresh Verma: two different patients \u2014 legitimate reuse",
+      "provider_a": "Dr. Suresh Verma",
+      "provider_b": "Dr. Suresh Verma"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine2_a.png",
+        "prescriptions/presc_genuine2_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "prescription",
+      "description": "Different doctors prescribing different medications \u2014 no fraud",
+      "provider_a": "Dr. Meena Kapoor",
+      "provider_b": "Dr. Arjun Nair"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine3_a.png",
+        "prescriptions/presc_genuine3_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "prescription",
+      "description": "Dr. Pradeep Kumar: different patients with different diagnoses \u2014 genuine",
+      "provider_a": "Dr. Pradeep Kumar",
+      "provider_b": "Dr. Pradeep Kumar"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud1_a.png",
+        "prescriptions/presc_fraud1_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "prescription",
+      "description": "Dr. Suresh Verma prescription cloned with Fake Doctor name \u2014 RED forgery",
+      "provider_a": "Dr. Suresh Verma",
+      "provider_b": "Dr. Fake Doctor Raj"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud2_a.png",
+        "prescriptions/presc_fraud2_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "prescription",
+      "description": "Identical prescription, only patient name changed \u2014 possible AMBER photoshop fraud",
+      "provider_a": "Dr. Meena Kapoor",
+      "provider_b": "Dr. Imposter"
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud3_a.png",
+        "prescriptions/presc_fraud3_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "prescription",
+      "description": "Dr. Pradeep Kumar template used by Ghost Clinic \u2014 RED template-reuse fraud",
+      "provider_a": "Dr. Pradeep Kumar",
+      "provider_b": "Dr. Ghost Clinic"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine1_a.png",
+        "lab_reports/lab_genuine1_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "lab_report",
+      "description": "Metropolis Lab: two patients, different results \u2014 genuine reports",
+      "provider_a": "Metropolis Healthcare Lab",
+      "provider_b": "Metropolis Healthcare Lab"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine2_a.png",
+        "lab_reports/lab_genuine2_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "lab_report",
+      "description": "Different labs, same test panel \u2014 no fraud expected",
+      "provider_a": "SRL Diagnostics",
+      "provider_b": "Thyrocare Labs"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine3_a.png",
+        "lab_reports/lab_genuine3_b.png"
+      ],
+      "label": "genuine",
+      "doc_type": "lab_report",
+      "description": "Lal PathLabs: same lab, different patients and results \u2014 genuine",
+      "provider_a": "Lal PathLabs",
+      "provider_b": "Lal PathLabs"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud1_a.png",
+        "lab_reports/lab_fraud1_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "lab_report",
+      "description": "Metropolis template used by Bogus Diagnostics \u2014 RED lab report forgery",
+      "provider_a": "Metropolis Healthcare Lab",
+      "provider_b": "Bogus Diagnostics Co"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud2_a.png",
+        "lab_reports/lab_fraud2_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "lab_report",
+      "description": "SRL Diagnostics: patient name swapped \u2014 possible AMBER photoshop fraud",
+      "provider_a": "SRL Diagnostics",
+      "provider_b": "Fake SRL Copy"
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud3_a.png",
+        "lab_reports/lab_fraud3_b.png"
+      ],
+      "label": "fraud",
+      "doc_type": "lab_report",
+      "description": "Lal PathLabs template used by Shady Labs Inc. \u2014 RED template-reuse forgery",
+      "provider_a": "Lal PathLabs",
+      "provider_b": "Shady Labs Inc."
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "total_pairs": 18,
+  "TP": 9,
+  "FN": 0,
+  "TN": 8,
+  "FP": 1,
+  "true_positive_rate": 1.0,
+  "false_positive_rate": 0.1111,
+  "overall_accuracy": 0.9444,
+  "per_doc_type": {
+    "invoice": {
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "accuracy": 1.0
+    },
+    "lab_report": {
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "accuracy": 1.0
+    },
+    "prescription": {
+      "tpr": 1.0,
+      "fpr": 0.3333,
+      "accuracy": 0.8333
+    }
+  },
+  "pair_results": [
+    {
+      "pair": [
+        "invoices/inv_genuine1_a.png",
+        "invoices/inv_genuine1_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "genuine",
+      "score": 0.9781,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Apollo Hospitals: two patients, same template \u2014 should score NONE",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "invoices/inv_genuine2_a.png",
+        "invoices/inv_genuine2_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "genuine",
+      "score": 0.6783,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Different providers, different layouts \u2014 no fraud signal expected",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "invoices/inv_genuine3_a.png",
+        "invoices/inv_genuine3_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "genuine",
+      "score": 0.9999,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Fortis Healthcare: same provider chain, two patients \u2014 genuine",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud1_a.png",
+        "invoices/inv_fraud1_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "fraud",
+      "score": 0.9781,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Near-identical invoice \u2014 only patient name changed \u2014 possible photoshop fraud",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud2_a.png",
+        "invoices/inv_fraud2_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "fraud",
+      "score": 0.9891,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Apollo template reused by Fraudulent Clinic \u2014 RED template-reuse forgery",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "invoices/inv_fraud3_a.png",
+        "invoices/inv_fraud3_b.png"
+      ],
+      "doc_type": "invoice",
+      "label": "fraud",
+      "score": 0.9891,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Apollo Hospitals template cloned by Fake Medcare \u2014 RED forgery",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine1_a.png",
+        "prescriptions/presc_genuine1_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "genuine",
+      "score": 0.9971,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Dr. Suresh Verma: two different patients \u2014 legitimate reuse",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine2_a.png",
+        "prescriptions/presc_genuine2_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "genuine",
+      "score": 0.9812,
+      "detected": "RED",
+      "outcome": "FP",
+      "is_correct": false,
+      "description": "Different doctors prescribing different medications \u2014 no fraud",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "prescriptions/presc_genuine3_a.png",
+        "prescriptions/presc_genuine3_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "genuine",
+      "score": 0.9912,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Dr. Pradeep Kumar: different patients with different diagnoses \u2014 genuine",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud1_a.png",
+        "prescriptions/presc_fraud1_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "fraud",
+      "score": 0.993,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Dr. Suresh Verma prescription cloned with Fake Doctor name \u2014 RED forgery",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud2_a.png",
+        "prescriptions/presc_fraud2_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "fraud",
+      "score": 0.9976,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Identical prescription, only patient name changed \u2014 possible AMBER photoshop fraud",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "prescriptions/presc_fraud3_a.png",
+        "prescriptions/presc_fraud3_b.png"
+      ],
+      "doc_type": "prescription",
+      "label": "fraud",
+      "score": 0.9944,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Dr. Pradeep Kumar template used by Ghost Clinic \u2014 RED template-reuse fraud",
+      "amber_thresh": 0.7,
+      "red_thresh": 0.85
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine1_a.png",
+        "lab_reports/lab_genuine1_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "genuine",
+      "score": 0.9543,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Metropolis Lab: two patients, different results \u2014 genuine reports",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine2_a.png",
+        "lab_reports/lab_genuine2_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "genuine",
+      "score": 0.701,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Different labs, same test panel \u2014 no fraud expected",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "lab_reports/lab_genuine3_a.png",
+        "lab_reports/lab_genuine3_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "genuine",
+      "score": 0.9348,
+      "detected": "NONE",
+      "outcome": "TN",
+      "is_correct": true,
+      "description": "Lal PathLabs: same lab, different patients and results \u2014 genuine",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud1_a.png",
+        "lab_reports/lab_fraud1_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "fraud",
+      "score": 0.9872,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Metropolis template used by Bogus Diagnostics \u2014 RED lab report forgery",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud2_a.png",
+        "lab_reports/lab_fraud2_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "fraud",
+      "score": 0.9844,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "SRL Diagnostics: patient name swapped \u2014 possible AMBER photoshop fraud",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    },
+    {
+      "pair": [
+        "lab_reports/lab_fraud3_a.png",
+        "lab_reports/lab_fraud3_b.png"
+      ],
+      "doc_type": "lab_report",
+      "label": "fraud",
+      "score": 0.9859,
+      "detected": "RED",
+      "outcome": "TP",
+      "is_correct": true,
+      "description": "Lal PathLabs template used by Shady Labs Inc. \u2014 RED template-reuse forgery",
+      "amber_thresh": 0.75,
+      "red_thresh": 0.9
+    }
+  ]
+}

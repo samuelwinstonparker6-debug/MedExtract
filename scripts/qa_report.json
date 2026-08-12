@@ -1,0 +1,131 @@
+[
+  {
+    "file": "tests/fraud_samples\\auth_city_hosp.png",
+    "status_code": 202,
+    "response": {
+      "id": 27,
+      "filename": "auth_city_hosp_1.png",
+      "upload_timestamp": "2026-08-12T04:02:14",
+      "source_type": "hospital",
+      "status": "completed",
+      "document_type": null,
+      "structured_data": {
+        "amount": {
+          "value": "$250.00",
+          "confidence": 0.85
+        },
+        "invoice_date": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "provider_name": {
+          "value": "",
+          "confidence": 0.6
+        },
+        "patient_name": {
+          "value": null,
+          "confidence": 0.0
+        },
+        "license_number": {
+          "value": null,
+          "confidence": 0.0
+        }
+      },
+      "layout_features": null,
+      "fingerprint_version": 2,
+      "fraud_status": "NONE",
+      "fraud_score": 0.6933,
+      "fraud_flags": [],
+      "reference_verification_result": null
+    },
+    "doc_id": 27,
+    "final": {
+      "status": "completed",
+      "fraud_status": "NONE",
+      "fraud_score": 0.6933,
+      "fraud_flags": []
+    },
+    "time_taken": 0.3310279846191406
+  },
+  {
+    "file": "tests/fraud_samples\\auth_generic_labs.png",
+    "status_code": 202,
+    "response": {
+      "id": 28,
+      "filename": "auth_generic_labs.png",
+      "upload_timestamp": "2026-08-12T04:02:15",
+      "source_type": "hospital",
+      "status": "pending",
+      "document_type": null,
+      "structured_data": null,
+      "layout_features": null,
+      "fingerprint_version": 2,
+      "fraud_status": "NONE",
+      "fraud_score": null,
+      "fraud_flags": null,
+      "reference_verification_result": null
+    },
+    "doc_id": 28,
+    "final": {
+      "status": "completed",
+      "fraud_status": "NONE",
+      "fraud_score": 0.4832,
+      "fraud_flags": []
+    },
+    "time_taken": 3.6973204612731934
+  },
+  {
+    "file": "tests/fraud_samples\\fraud_amber_mike.png",
+    "status_code": 202,
+    "response": {
+      "id": 29,
+      "filename": "fraud_amber_mike.png",
+      "upload_timestamp": "2026-08-12T04:02:18",
+      "source_type": "hospital",
+      "status": "pending",
+      "document_type": null,
+      "structured_data": null,
+      "layout_features": null,
+      "fingerprint_version": 2,
+      "fraud_status": "NONE",
+      "fraud_score": null,
+      "fraud_flags": null,
+      "reference_verification_result": null
+    },
+    "doc_id": 29,
+    "final": {
+      "status": "completed",
+      "fraud_status": "NONE",
+      "fraud_score": 0.6918,
+      "fraud_flags": []
+    },
+    "time_taken": 4.359065771102905
+  },
+  {
+    "file": "tests/fraud_samples\\fraud_red_fake.png",
+    "status_code": 202,
+    "response": {
+      "id": 30,
+      "filename": "fraud_red_fake.png",
+      "upload_timestamp": "2026-08-12T04:02:23",
+      "source_type": "hospital",
+      "status": "pending",
+      "document_type": null,
+      "structured_data": null,
+      "layout_features": null,
+      "fingerprint_version": 2,
+      "fraud_status": "NONE",
+      "fraud_score": null,
+      "fraud_flags": null,
+      "reference_verification_result": null
+    },
+    "doc_id": 30,
+    "final": {
+      "status": "completed",
+      "fraud_status": "NONE",
+      "fraud_score": 0.7108,
+      "fraud_flags": []
+    },
+    "time_taken": 13.252943992614746
+  }
+]

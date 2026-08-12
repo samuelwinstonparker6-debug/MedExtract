@@ -35,7 +35,6 @@ COPY --from=builder /usr/local/bin /usr/local/bin
 COPY app/ app/
 COPY alembic/ alembic/
 COPY alembic.ini .
-COPY celery_worker.py .
 
 # Run as non-root for security
 RUN useradd --system --create-home --home-dir /app appuser && \

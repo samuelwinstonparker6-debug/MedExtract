@@ -1,3 +1,6 @@
+# ── PyTorch CPU-only (avoids 2GB CUDA download — required for free hosting) ──
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # Web framework
 fastapi>=0.100.0
 uvicorn[standard]
@@ -6,14 +9,9 @@ python-multipart
 # Database
 sqlalchemy>=2.0
 alembic
-psycopg2-binary
-
-# Task Queue
-celery[redis]
-redis
 
 # Image Processing
-opencv-python
+opencv-python-headless
 Pillow
 imagehash
 numpy
@@ -25,17 +23,12 @@ pytesseract
 # Rate Limiting
 slowapi
 
-# Testing
-pytest
-httpx
-
 # Pydantic v2
 pydantic>=2.0
 pydantic-settings
 
 pyzbar
 
-
 faiss-cpu
-torch
-torchvision
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
